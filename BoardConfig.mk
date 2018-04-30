@@ -86,3 +86,5 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
