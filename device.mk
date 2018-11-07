@@ -308,6 +308,9 @@ TARGET_KERNEL_VERSION := 4.19
 KERNEL_LLVM_SUPPORT := true
 KERNEL_SD_LLVM_SUPPORT := true
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
