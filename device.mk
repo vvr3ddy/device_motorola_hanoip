@@ -3,8 +3,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 LOCAL_PATH := device/motorola/hanoip
 
+
 # define hardware platform
 PRODUCT_PLATFORM := sm6150
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# The first api level, device has been commercially launched on.
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
