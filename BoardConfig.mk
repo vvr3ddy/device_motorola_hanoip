@@ -174,6 +174,10 @@ BOARD_RAMDISK_USE_LZMA := true
 # Dimensions
 TW_Y_OFFSET := 115
 TW_H_OFFSET := -115
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Treble
 BOARD_VNDK_VERSION := current
 
