@@ -4,34 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc \
-
-PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.mmi.boot.sh \
-    init.mmi.laser.sh \
-    init.mmi.touch.sh \
-    init.oem.fingerprint.sh \
-    init.oem.fingerprint2.sh \
-    init.oem.hw.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qti.dcvs.sh \
-    init.qti.early_init.sh \
-
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.mmi.charge_only.rc \
-    init.mmi.chipset.rc \
-    init.mmi.debug.rc \
-    init.mmi.overlay.rc \
-    init.mmi.rc \
-    init.qcom.rc \
-    init.target.rc \
-
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -63,6 +37,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Audio - Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
 # Bootctrl
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
@@ -90,6 +70,34 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc \
+
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.mmi.boot.sh \
+    init.mmi.laser.sh \
+    init.mmi.touch.sh \
+    init.oem.fingerprint.sh \
+    init.oem.fingerprint2.sh \
+    init.oem.hw.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh \
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.mmi.charge_only.rc \
+    init.mmi.chipset.rc \
+    init.mmi.debug.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.qcom.rc \
+    init.target.rc \
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 30
