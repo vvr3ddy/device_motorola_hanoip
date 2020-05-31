@@ -65,6 +65,19 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script
+    
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    libaacwrapper
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -134,6 +147,9 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0
+
+# Properties
+-include $(LOCAL_PATH)/system_prop.mk
 
 # Telephony
 PRODUCT_PACKAGES += \
