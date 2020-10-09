@@ -204,6 +204,7 @@ TARGET_SCREEN_DENSITY := 440
 
 
 # Sepolicy
+include device/qcom/sepolicy/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 
