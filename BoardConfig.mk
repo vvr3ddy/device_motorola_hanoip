@@ -23,7 +23,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a9
 TARGET_BOOTLOADER_BOARD_NAME := hanoip
 TARGET_NO_BOOTLOADER := true
 
-<<<<<<< HEAD:BoardConfig.mk
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sm6150
@@ -37,10 +37,11 @@ ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/sku/manifest_b.xml
 ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/sku/manifest_d.xml
 ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
 ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
-=======
+
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
->>>>>>> 889dc39 (sm6225-common: Import config.fs from CodeLinaro):BoardConfigCommon.mk
+TARGET_FS_CONFIG_GEN := \
+    $(COMMON_PATH)/config.fs \
+    $(COMMON_PATH)/mot_aids.fs
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
