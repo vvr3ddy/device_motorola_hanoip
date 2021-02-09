@@ -120,6 +120,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     WifiOverlay
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \

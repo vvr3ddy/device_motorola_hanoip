@@ -196,16 +196,10 @@ vendor/lib/modules/watchdogtest.ko:proprietary/vendor_overlay/30/lib/modules/wat
 # Perf
 system_ext/lib/libqti-perfd-client_system.so
 system_ext/lib/libqti-util_system.so
-system_ext/lib/libqti_performance.so
-system_ext/lib/vendor.qti.hardware.perf@2.0.so
-system_ext/lib/vendor.qti.hardware.perf@2.1.so
-system_ext/lib/vendor.qti.hardware.perf@2.2.so
+system_ext/lib/libqti_performance.sysconfig
 system_ext/lib64/libqti-perfd-client_system.so
 system_ext/lib64/libqti-util_system.so
 system_ext/lib64/libqti_performance.so
-system_ext/lib64/vendor.qti.hardware.perf@2.0.so
-system_ext/lib64/vendor.qti.hardware.perf@2.1.so
-system_ext/lib64/vendor.qti.hardware.perf@2.2.so
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/bin/msm_irqbalance
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
