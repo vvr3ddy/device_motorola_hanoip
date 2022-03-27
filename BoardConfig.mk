@@ -108,6 +108,10 @@ BOARD_USES_METADATA_PARTITION := true
 # OpenGL
 USE_OPENGL_RENDERER := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_motorola_hanoip
+TARGET_RECOVERY_DEVICE_MODULES := init_motorola_hanoip
+
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_IMAGE_NAME  := Image
