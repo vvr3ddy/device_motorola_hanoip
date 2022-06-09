@@ -107,3 +107,7 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     init.qcom.rc
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.hanoip
