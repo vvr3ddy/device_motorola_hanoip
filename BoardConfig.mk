@@ -178,6 +178,10 @@ TW_H_OFFSET := -115
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Screen density
+TARGET_SCREEN_DENSITY := 440
+
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
