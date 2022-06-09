@@ -178,6 +178,10 @@ TW_H_OFFSET := -115
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+
 # Treble
 BOARD_VNDK_VERSION := current
 
