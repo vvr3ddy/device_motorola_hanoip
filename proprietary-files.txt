@@ -137,6 +137,24 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
 
+# FM
+system_ext/lib/fm_helium.so
+system_ext/lib/libfm-hci.so
+system_ext/lib/vendor.qti.hardware.fm@1.0.so
+system_ext/lib64/fm_helium.so
+system_ext/lib64/libfm-hci.so
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/bin/fm_qsoc_patches
+vendor/bin/hw/motorola.hardware.fmradio@1.0-service
+vendor/lib/ftm_fm_lib.so
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/ftm_fm_lib.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/motorola.hardware.fmradio@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
+
 # Kernel Modules
 vendor/lib/modules/audio_adsp_loader.ko:proprietary/vendor_overlay/30/lib/modules/audio_adsp_loader.ko
 vendor/lib/modules/audio_apr.ko:proprietary/vendor_overlay/30/lib/modules/audio_apr.ko
