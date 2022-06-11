@@ -149,7 +149,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0
 
 # Properties
+-include $(LOCAL_PATH)/product_prop.mk
 -include $(LOCAL_PATH)/system_prop.mk
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Telephony
 PRODUCT_PACKAGES += \
