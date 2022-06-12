@@ -97,11 +97,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
-#TWRP
-PRODUCT_COPY_FILES += \
-    device/motorola/hanoip/prebuilt/systemmanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/manifest.xml \
-    device/motorola/hanoip/prebuilt/vendormanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml
-
 # qcom decryption
 PRODUCT_PACKAGES_ENG += \
     qcom_decrypt \
@@ -110,11 +105,6 @@ PRODUCT_PACKAGES_ENG += \
 # tzdata
 PRODUCT_PACKAGES_ENG += \
     tzdata_twrp
-
-# Apex libraries
-PRODUCT_COPY_FILES += \
-    device/motorola/hanoip/recovery/root/system/lib64/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so \
-    device/motorola/hanoip/recovery/root/system/lib64/libhidlbase.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libhidlbase.so
 
 # fstab
 PRODUCT_COPY_FILES += \
