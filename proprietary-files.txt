@@ -1488,6 +1488,10 @@ vendor/lib64/sensors.moto.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.tof.vl53l1.so
 
+# WFD
+-framework/WfdCommon.jar
+system_ext/lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
+
 # WiFi
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
