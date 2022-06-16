@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
-    audio.primary.bengal \
+    audio.primary.sm6150 \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
@@ -113,6 +113,44 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.device@3.5.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.11.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor
+
+PRODUCT_PACKAGES += \
+    gralloc.sm6150 \
+    hwcomposer.sm6150 \
+    memtrack.sm6150 \
+
+PRODUCT_PACKAGES += \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
+    libqdMetaData \
+    libsdmcore \
+    libsdmutils \
+    libtinyxml
+
+PRODUCT_PACKAGES += \
+    libvulkan
+
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Fastboot
 PRODUCT_PACKAGES += \
