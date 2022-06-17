@@ -338,6 +338,29 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.mmi.charge_only.rc \
+    init.mmi.chipset.rc \
+    init.mmi.debug.rc \
+    init.mmi.diag_mdlog.rc \
+    init.mmi.diag.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.sensor.rc \
+    init.mmi.tcmd.rc \
+    init.mmi.usb.rc \
+    init.mmi.wlan.rc \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.qti.ufs.rc \
+    init.target.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
