@@ -212,6 +212,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# DPM
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.dpm.feature=11
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0.vendor \
@@ -252,14 +256,6 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libipanat \
     liboffloadhal
-
-# Enable incremental FS feature
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.incremental.enable=1
-
-# Manufacturer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.soc.manufacturer=QTI
 
 # Media
 PRODUCT_PACKAGES += \
