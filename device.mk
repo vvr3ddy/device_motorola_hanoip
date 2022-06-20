@@ -174,6 +174,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@3.5.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+# Configs File System
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
