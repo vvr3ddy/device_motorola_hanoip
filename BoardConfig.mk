@@ -78,7 +78,7 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Configs File System
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/configs.fs
 
 # Display
 TARGET_USES_COLOR_METADATA := true
@@ -152,6 +152,8 @@ BOARD_KERNEL_CMDLINE += \
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+TARGET_KERNEL_CONFIG := hanoip_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/hanoip
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
