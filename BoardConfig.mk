@@ -62,11 +62,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
-# HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
-
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_PAGESIZE := 4096
@@ -93,6 +88,13 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_FORCE_PREBUILT_KERNEL := yes 
 TARGET_KERNEL_CONFIG := hanoip_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/hanoip
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom \
+                        lpm_levels.sleep_disabled=1 \
+                        video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 \
+                        service_locator.enable=1 \
+                        swiotlb=1 \
+                        androidboot.usbcontroller=a600000.dwc3 \
+                        androidboot.selinux=permissive
 
 # Partitions 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -190,8 +192,7 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
-# VINTF
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
+# Prebuilt Vendor
+BUILD_WITHOUT_VENDOR := true
+BOARD_PREBUILT_VENDORIMAGE := prebuilt/vendor/vendor.img
 
-# Inherit from the proprietary version
--include vendor/motorola/hanoip/BoardConfigVendor.mk
