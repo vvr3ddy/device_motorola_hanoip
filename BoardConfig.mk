@@ -44,9 +44,9 @@ BOARD_KERNEL_OFFSET        := 0x00008000
 BOARD_RAMDISK_OFFSET       := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET   := 0x00000100
 BOARD_DTB_OFFSET           := 0x01f00000
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilts/
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_INCLUDE_RECOVERY_DTBO := false
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
@@ -68,7 +68,9 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom \
                         service_locator.enable=1 \
                         swiotlb=1 \
                         androidboot.usbcontroller=a600000.dwc3 \
-            
+                        androidboot.selinux=permissive
+
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
@@ -92,12 +94,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Platform
 TARGET_BOARD_PLATFORM := sm6150
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
@@ -119,4 +115,7 @@ VENDOR_SECURITY_PATCH := 2021-08-01
 # BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Prebuilt Vendor
-BUILD_WITHOUT_VENDOR := true
+BOARD_PREBUILT_VENDORIMAGE := vendor/motorola/hanoip/vendor.img
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml

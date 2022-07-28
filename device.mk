@@ -10,8 +10,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Enable virtual A/B OTA
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+# Enable Virtual A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 # A/B
 PRODUCT_PACKAGES += \
@@ -46,9 +46,7 @@ AB_OTA_PARTITIONS += \
     system \
     system_ext \
     vendor \
-    vendor_boot \
-    vbmeta \
-    vbmeta_system
+    vendor_boot
 
 BOARD_USES_RECOVERY_AS_BOOT := true
 

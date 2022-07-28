@@ -352,4 +352,34 @@
         <transport>hwbinder</transport>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
+    <!--Added by VVR-->
+    <hal format="hidl">
+        <name>android.hardware.graphics.allocator</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::IAllocator/default</fqname>
+        <fqname>@3.0::IAllocator/default</fqname>
+        <fqname>@4.0::IAllocator/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.composer</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.4::IComposer/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.mapper</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IMapper/default</fqname>
+        <fqname>@3.0::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.health</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IHealth/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.power</name>
+        <fqname>IPower/default</fqname>
+    </hal>
+</manifest>
 </manifest>
