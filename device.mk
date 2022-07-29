@@ -69,6 +69,12 @@ PRODUCT_CHARACTERISTICS := default
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
+# RIL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full \
+    librmnetctl \
+    libxml2
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
