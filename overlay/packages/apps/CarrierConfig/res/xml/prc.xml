@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carrier_config_list>
+    <carrier_config mcc="001" mnc="01" name="Test SIM">
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+    </carrier_config>
+    <carrier_config cid="1435" name="China Mobile">
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+    </carrier_config>
+    <carrier_config cid="1436" name="China Unicom">
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+    </carrier_config>
+    <carrier_config cid="2237" name="China Telecom">
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+        <boolean name="hide_enable_2g_bool" value="true" />
+    </carrier_config>
+</carrier_config_list>
