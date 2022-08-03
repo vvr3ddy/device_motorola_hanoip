@@ -21,9 +21,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Prebuilt headers
-PRODUCT_VENDOR_KERNEL_HEADERS := $(LOCAL_PATH)/kernel-headers
-
 # A/B
 AB_OTA_UPDATER := true
 
