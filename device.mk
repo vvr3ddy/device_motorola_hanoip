@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.clearkey
+
 # Filesystem
 PRODUCT_PACKAGES += \
     fs_config_files
