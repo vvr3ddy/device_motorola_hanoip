@@ -37,6 +37,10 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 420
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
+TARGET_USES_GRALLOC4 := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
 
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/ext_config/hanoip-default.config
