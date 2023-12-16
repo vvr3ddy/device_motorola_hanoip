@@ -112,6 +112,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgui_vendor
 
+# Display
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
+TARGET_USES_GRALLOC4 := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
+
 # Filesystem
 PRODUCT_PACKAGES += \
     fs_config_files
