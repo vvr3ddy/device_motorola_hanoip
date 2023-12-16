@@ -108,3 +108,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vendor ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom_ramdisk:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/motorola/hanoip/hanoip-vendor.mk)
