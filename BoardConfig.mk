@@ -73,7 +73,7 @@ TARGET_KERNEL_CONFIG := vendor/sm6150_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/sm6150
 
 # Kernel - Prebuilt
-include device/motorola/sm6225-kernel/prebuilt_kernel.mk
+include device/motorola/sm6150-kernel/prebuilt_kernel.mk
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
