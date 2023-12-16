@@ -26,6 +26,9 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 420
 
+# Kernel
+TARGET_KERNEL_CONFIG += vendor/ext_config/hanoip-default.config
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := \
     $(COMMON_PATH)/config.fs \
