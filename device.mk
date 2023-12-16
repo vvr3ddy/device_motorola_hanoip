@@ -44,6 +44,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
     android.hardware.boot@1.1-service
 
+# Include GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
