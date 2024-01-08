@@ -12,7 +12,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl
 
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.usb.default \
     audio.r_submix.default
@@ -149,7 +148,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm-service.clearkey
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -191,9 +190,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
-
-# Include GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -246,10 +242,6 @@ PRODUCT_PACKAGES += \
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
-
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -331,7 +323,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc \
+    ueventd.qcom.rc
 
 # Sensors
 PRODUCT_PACKAGES += \

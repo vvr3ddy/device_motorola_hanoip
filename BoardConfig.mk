@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/hawao
+DEVICE_PATH := device/motorola/hanoip
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -69,7 +69,7 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_CONFIG := vendor/sm6150_defconfig
+TARGET_KERNEL_CONFIG := vendor/ext_config/moto-sdmmagpie-hanoip.config
 TARGET_KERNEL_SOURCE := kernel/motorola/sm6150
 
 # Kernel - Prebuilt

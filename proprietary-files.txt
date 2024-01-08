@@ -197,7 +197,6 @@ lib64/libaptX_encoder.so
 system_ext/bin/aptxalsOverlayCreateProject.sh
 system_ext/etc/permissions/privapp-permissions-aptxals.xml
 system_ext/etc/permissions/privapp-permissions-com.bluetooth.aptxmode.xml
--system_ext/priv-app/MotoBtAptxMode/MotoBtAptxMode.apk
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -671,7 +670,7 @@ system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 
 # DRM
 vendor/bin/qseecomd
@@ -732,11 +731,8 @@ vendor/lib64/libhdcpsrm.so
 vendor/lib64/libmm-hdcpmgr.so
 
 # DRM-Hardware
-vendor/bin/hw/android.hardware.drm@1.3-service.clearkey
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 
 # DRM-Qteeconnector
@@ -1255,7 +1251,6 @@ vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVdec.so
 vendor/lib/libOmxVenc.so
--vendor/lib/libplatformconfig.so
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libarbitrarybytes.so
 vendor/lib64/libc2dcolorconvert.so
@@ -1265,7 +1260,6 @@ vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
 vendor/lib64/libOmxVdec.so
 vendor/lib64/libOmxVenc.so
--vendor/lib64/libplatformconfig.so
 vendor/lib64/libstagefrighthw.so
 
 # Motorola
@@ -1571,7 +1565,7 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/hw/qcrild
 vendor/bin/netmgrd
@@ -1718,11 +1712,8 @@ vendor/radio/qcril_database/upgrade/7_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
-# Radio - Moto
-etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
-framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
-
-# Radio-IMS
+# Radio-
+system_ext/priv-app/ims/ims.apk
 -system_ext/app/uceShimService/uceShimService.apk
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
@@ -1836,7 +1827,6 @@ system_ext/lib64/vendor.qti.ims.rcssip@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsuce@1.0.so
 system_ext/lib64/vendor.qti.ims.rcsuce@1.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
 vendor/bin/imsrcsd
@@ -2721,66 +2711,6 @@ system_ext/lib64/vendor.qti.mstatservice@1.0.so
 system_ext/lib64/vendor.qti.qesdhal@1.0.so
 system_ext/lib64/vendor.qti.qesdhal@1.1.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
--system_ext/priv-app/3c_devicemanagement-binary/3c_devicemanagement-binary.apk
--system_ext/priv-app/3c_notification/3c_notification.apk
--system_ext/priv-app/3c_ota/3c_ota.apk
--system_ext/priv-app/AttIqi/AttIqi.apk
--system_ext/priv-app/CarrierConfig/CarrierConfig.apk
--system_ext/priv-app/ChromeHomePageProvider/ChromeHomePageProvider.apk
--system_ext/priv-app/com.motorola.android.jvtcmd/com.motorola.android.jvtcmd.apk
--system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
--system_ext/priv-app/CoreSettingsExt/CoreSettingsExt.apk
--system_ext/priv-app/CQATest/CQATest.apk
-system_ext/priv-app/CQATest/lib/arm64/libarcsoft_aec_luma_calculation.so
-system_ext/priv-app/CQATest/lib/arm64/libarcsoft_aec_luma_calc_bm.so
-system_ext/priv-app/CQATest/lib/arm64/libc++_shared.so
-system_ext/priv-app/CQATest/lib/arm64/libgcorejni.so
-system_ext/priv-app/CQATest/lib/arm64/libMPLib.so
-system_ext/priv-app/CQATest/lib/arm64/libNVT36xxx.so
-system_ext/priv-app/CQATest/lib/arm64/libtestcore.so
-system_ext/priv-app/CQATest/lib/arm64/libtestsdk.so
--system_ext/priv-app/DemoMode/DemoMode.apk
--system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk
--system_ext/priv-app/Fota/Fota.apk
--system_ext/priv-app/GestureNavigationTutorial/GestureNavigationTutorial.apk
--system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk
--system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk
--system_ext/priv-app/GoogleWallpapers/GoogleWallpapers.apk
--system_ext/priv-app/HiddenMenu/HiddenMenu.apk
--system_ext/priv-app/ImagerTuning-V2/ImagerTuning-V2.apk
-system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
-system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
--system_ext/priv-app/IqiMotMetrics/IqiMotMetrics.apk
--system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk
-system_ext/priv-app/Launcher3QuickStep/lib/arm64/libsqlite3ext.so
-system_ext/priv-app/Launcher3QuickStep/lib/arm64/libsqlite3x.so
--system_ext/priv-app/LifetimeData/LifetimeData.apk
--system_ext/priv-app/ModemStatsService/ModemStatsService.apk
--system_ext/priv-app/MotCameraDesktop/MotCameraDesktop.apk
--system_ext/priv-app/MotoCare/MotoCare.apk
--system_ext/priv-app/MotoDesktopCore/MotoDesktopCore.apk
--system_ext/priv-app/MotoFeatureDiscovery/MotoFeatureDiscovery.apk
--system_ext/priv-app/MotoLiveWallpaper3/MotoLiveWallpaper3.apk
--system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
--system_ext/priv-app/MotoTaskBar/MotoTaskBar.apk
--system_ext/priv-app/MotoThinkUEM/MotoThinkUEM.apk
--system_ext/priv-app/MotoWifiMetrics/MotoWifiMetrics.apk
--system_ext/priv-app/MSimSettings/MSimSettings.apk
--system_ext/priv-app/PAKS/PAKS.apk
--system_ext/priv-app/Personalize/Personalize.apk
--system_ext/priv-app/QuickAccessWallet/QuickAccessWallet.apk
--system_ext/priv-app/rcsConfigService/rcsConfigService.apk
--system_ext/priv-app/RevokerServices/RevokerServices.apk
--system_ext/priv-app/Settings/Settings.apk
--system_ext/priv-app/SetupWizard/SetupWizard.apk
--system_ext/priv-app/SetupWizardExt/SetupWizardExt.apk
--system_ext/priv-app/SpectrumSetupExt/SpectrumSetupExt.apk
--system_ext/priv-app/StorageManager/StorageManager.apk
-system_ext/priv-app/SystemUI/lib/arm64/libBitmapOffsetCalculate_jni.so
--system_ext/priv-app/SystemUI/SystemUI.apk
--system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk
--system_ext/priv-app/xrcbservice/xrcbservice.apk
--system_ext/priv-app/xrvdservice/xrvdservice.apk
 -vendor/app/CACertService/CACertService.apk
 vendor/bin/adpl
 vendor/bin/aplogcat
