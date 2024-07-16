@@ -9,6 +9,9 @@ include device/motorola/sm6150-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/hanoip
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := hanoip
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
