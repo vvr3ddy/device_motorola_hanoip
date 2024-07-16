@@ -21,3 +21,9 @@ PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g60
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+BUILD_FINGERPRINT := "motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_PRODUCT=hanoip_retail \
+    PRIVATE_BUILD_DESC="motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys"
