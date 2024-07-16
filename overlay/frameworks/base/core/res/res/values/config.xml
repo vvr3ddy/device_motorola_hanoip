@@ -306,4 +306,15 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">M -580,0 L -500,0 L -500,115 L -580,115 Z @right</string>
 
+      <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>60</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>50</item>
+    </integer-array>
 </resources>
