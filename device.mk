@@ -17,7 +17,8 @@ TARGET_SCREEN_WIDTH := 1080
 # Rootdir
 PRODUCT_PACKAGES += \
     init.oem.fingerprint2.sh \
-    init.mmi.overlay.rc
+    init.mmi.overlay.rc \
+    init.recovery.qcom.rc
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -61,7 +62,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
+    
 
 # Shipping API level
 BOARD_API_LEVEL := 30
