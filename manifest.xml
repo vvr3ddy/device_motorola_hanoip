@@ -721,8 +721,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
-    <sepolicy>
-        <version>30.0</version>
-    </sepolicy>
     <kernel target-level="5"/>
 </manifest>
