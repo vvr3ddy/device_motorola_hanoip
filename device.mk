@@ -56,7 +56,7 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
-    audio.primary.bengal \
+    audio.primary.sm6150 \
     audio.r_submix.default \
     audio.usb.default \
     sound_trigger.primary.sm6150
@@ -126,8 +126,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service
 
 PRODUCT_PACKAGES += \
-    gralloc.bengal \
-    memtrack.bengal
+    gralloc.sm6150 \
+    memtrack.sm6150
 
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
